@@ -6,6 +6,25 @@
     <title>Scratch</title>
 </head>
 <body>
-    
+    <h1 id="heading1">My Heading</h1>
+    <p id="paragraph1">this is some text in a paragraph tag</p>
+    <span>Below is a table</span>
+    <table>
+        <tr>
+            <td>Row 1 Cell 1</td>
+            <td>Row 2 Cell 2</td>
+        </tr>
+    </table>
+
+    <script>
+        const container = document.documentElement;
+        const h1Element = document.getElementById("heading1");
+        const p1Element = document.getElementById("paragraph1");
+        const tdElement = document.getElementsByTagName("td").item(0);
+        alert(container.tagName);
+        h1Element.style.color = 'red';
+        p1Element.style.color = 'blue';
+        tdElement.style.color = 'orange';
+    </script>
 </body>
 </html>
