@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 9, Example 1</title>
-</head>
-<body>
-    
-</body>
-</html>
+// makes the paragraph1 element a variable
+const pElement = document.getElementById("paragraph1");
+
+// set the paragraph1 element to align to the center of the page
+pElement.setAttribute("align", "center");
+
+// the alert shows the value of align
+alert(pElement.getAttribute("align"));
+
+// removes the value of align and text goes back to left align
+pElement.removeAttribute("align");
