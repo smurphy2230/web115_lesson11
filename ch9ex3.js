@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 9, Example 3</title>
-</head>
-<body>
-    
-</body>
-</html>
+// Create HTML elements and text with DOM methods
+
+let newText = document.createTextNode("My Heading");
+let newElem = document.createElement("h1");
+
+newElem.appendChild(newText);
+document.body.appendChild(newElem);
+
+newText = document.createTextNode("This is some text created by js");
+newElem = document.createElement("p");
+
+newElem.appendChild(newText);
+document.body.appendChild(newElem);
