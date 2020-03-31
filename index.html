@@ -7,7 +7,7 @@
     <style>
         #divAdvert {
             position: absolute;
-            font: 12pt arial;
+            font: 12px arial;
             top: 4px;
             left: 0px;
         }
@@ -18,6 +18,32 @@
        Here is an advertisement.
     </div>
 
-    <script src="ch9ex6.js"></script>
+    <script>
+        var switchDirection = false;
+
+        function doAnimation() {
+            var divAdvert = document.getElementById("divAdvert");
+            var currentLeft = divAdvert.offsetLeft;
+            var newLocation;
+        
+            if (!switchDirection) {
+                newLocation = currentLeft + 2;
+            
+                if (currentLeft >= 400) {
+                    switchDirection = true;
+                } else {
+                    newLocation = currentLeft - 2;
+                
+                    if (currentLeft <= 0) {
+                        switchDirection = false;
+                    }
+                }
+            
+            }
+            divAdvert.style.left = newLocation + "px";
+        }
+        
+        setInterval(doAnimation, 10);
+    </script>
 </body>
 </html>
